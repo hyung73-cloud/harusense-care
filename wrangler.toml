@@ -5,7 +5,7 @@ pages_build_output_dir = "."
 [[d1_databases]]
 binding = "CARE_DB"
 database_name = "care-db"
-database_id = "REPLACE_WITH_CARE_DB_ID"
+database_id = "a5ae2c05-49f3-4f65-b39a-20a4060e059c"
 migrations_dir = "migrations"
 
 [vars]
