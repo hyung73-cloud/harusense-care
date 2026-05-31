@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>care 대시보드</title>
+    <link rel="stylesheet" href="/assets/care.css">
+  </head>
+  <body>
+    <main class="care-dashboard">
+      <header class="care-dashboard-header">
+        <div>
+          <p class="care-eyebrow">뉴센스의원 care</p>
+          <h1>오늘 재진 문진</h1>
+        </div>
+        <div class="care-header-actions">
+          <a class="care-secondary" href="/?clinic=newsense">환자 문진</a>
+          <button id="careLogoutButton" class="care-secondary" type="button">로그아웃</button>
+        </div>
+      </header>
+
+      <section class="care-notice">
+        AI 요약은 의사 상담 참고용입니다. 진단, 처방, 시술, 용량 변경 여부는 담당 의사가 최종 판단합니다.
+      </section>
+
+      <section class="care-dashboard-grid">
+        <aside class="care-panel care-list-panel">
+          <div class="care-panel-title">
+            <h2>오늘 제출</h2>
+            <span id="careTodayCount">0명</span>
+          </div>
+          <div id="careSubmissionList" class="care-submission-list"></div>
+        </aside>
+
+        <section class="care-panel care-detail-panel">
+          <div id="careSubmissionDetail" class="care-empty">
+            환자를 선택하면 문진 기록과 AI 참고 요약이 표시됩니다.
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/assets/care-shared.js"></script>
+    <script src="/assets/care-dashboard.js"></script>
+  </body>
+</html>

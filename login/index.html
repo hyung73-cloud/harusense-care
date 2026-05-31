@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>care 의료진 로그인</title>
+    <link rel="stylesheet" href="/assets/care.css">
+  </head>
+  <body>
+    <main class="care-shell care-login-shell">
+      <section class="care-login-card">
+        <p class="care-eyebrow">뉴센스의원 care</p>
+        <h1>의료진 로그인</h1>
+        <form id="careLoginForm" class="care-form">
+          <label>
+            아이디
+            <input name="loginId" autocomplete="username" required>
+          </label>
+          <label>
+            비밀번호
+            <input name="password" type="password" autocomplete="current-password" required>
+          </label>
+          <button class="care-primary" type="submit">로그인</button>
+          <p id="careLoginMessage" class="care-message" role="status"></p>
+        </form>
+        <p class="care-small">care.harusense.com 전용 의료진 화면입니다.</p>
+      </section>
+    </main>
+
+    <script src="/assets/care-shared.js"></script>
+    <script src="/assets/care-login.js"></script>
+  </body>
+</html>
