@@ -1,0 +1,17 @@
+name = "harusense-care"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "CARE_DB"
+database_name = "care-db"
+database_id = "a5ae2c05-49f3-4f65-b39a-20a4060e059c"
+migrations_dir = "migrations"
+
+[vars]
+CARE_AI_MODEL = "gpt-4o-mini"
+CARE_PASSWORD_SALT = "newsense-care-salt-v1"
+
+# Secrets (Cloudflare Dashboard → Settings → Variables):
+# CARE_SESSION_SECRET  — 32+ char random string
+# CARE_OPENAI_API_KEY  — OpenAI API key

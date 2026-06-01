@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>care 문진 | 뉴센스의원</title>
+    <link rel="stylesheet" href="/assets/care.css">
+  </head>
+  <body>
+    <main class="care-shell care-patient-shell">
+      <section class="care-hero">
+        <p class="care-eyebrow">뉴센스의원 care</p>
+        <h1 id="careFormTitle">재진 전 문진</h1>
+        <p id="careFormDescription">진료 전 현재 상태를 간단히 알려주세요. 입력 내용은 담당 의사가 상담 전 확인합니다.</p>
+      </section>
+
+      <form id="carePatientForm" class="care-form">
+        <section class="care-panel" data-care-section="patient">
+          <h2>환자 확인</h2>
+          <div class="care-grid">
+            <label>
+              이름
+              <input name="name" autocomplete="name" required>
+            </label>
+            <label>
+              생년월일
+              <input name="birthDate" type="date">
+            </label>
+            <label>
+              연락처 뒷자리
+              <input name="phoneLast4" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" placeholder="1234">
+            </label>
+          </div>
+        </section>
+
+        <section class="care-panel" data-care-section="vitals">
+          <h2>키와 체중</h2>
+          <div class="care-grid">
+            <label>
+              키 cm
+              <input name="heightCm" type="number" step="0.1" min="100" max="250">
+            </label>
+            <label>
+              현재 체중 kg
+              <input name="currentWeightKg" type="number" step="0.1" min="20" max="250">
+            </label>
+            <label>
+              시작 체중 kg
+              <input name="startWeightKg" type="number" step="0.1" min="20" max="250">
+            </label>
+          </div>
+        </section>
+
+        <section class="care-panel" data-care-section="medication">
+          <h2>체중과 약제</h2>
+          <div class="care-grid">
+            <label>
+              현재 체중 kg
+              <input name="currentWeightKg" type="number" step="0.1" min="20" max="250">
+            </label>
+            <label>
+              시작 체중 kg
+              <input name="startWeightKg" type="number" step="0.1" min="20" max="250">
+            </label>
+            <label>
+              현재 약제
+              <select name="currentMedication">
+                <option value="">선택</option>
+                <option>위고비</option>
+                <option>마운자로</option>
+                <option>삭센다</option>
+                <option>기타</option>
+                <option>없음</option>
+              </select>
+            </label>
+            <label>
+              현재 용량
+              <input name="currentDose" placeholder="예: 0.5mg, 2.5mg">
+            </label>
+            <label class="care-wide">
+              최근 체중 변화
+              <select name="recentWeightChange">
+                <option value="">선택</option>
+                <option>잘 감소 중</option>
+                <option>조금 감소</option>
+                <option>정체</option>
+                <option>증가</option>
+                <option>잘 모르겠음</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="care-panel" data-care-section="symptoms">
+          <h2>증상과 생활</h2>
+          <div class="care-grid">
+            <label>
+              식욕
+              <select name="appetite">
+                <option value="">선택</option>
+                <option>많이 줄어듦</option>
+                <option>조금 줄어듦</option>
+                <option>변화 없음</option>
+                <option>오히려 증가</option>
+              </select>
+            </label>
+            <label>
+              변비
+              <select name="constipation">
+                <option value="">선택</option>
+                <option>없음</option>
+                <option>가끔 있음</option>
+                <option>자주 있음</option>
+                <option>심함</option>
+              </select>
+            </label>
+            <label>
+              수면
+              <select name="sleep">
+                <option value="">선택</option>
+                <option>좋음</option>
+                <option>보통</option>
+                <option>나쁨</option>
+                <option>매우 나쁨</option>
+              </select>
+            </label>
+            <label>
+              운동
+              <select name="exercise">
+                <option value="">선택</option>
+                <option>거의 안 함</option>
+                <option>주 1~2회</option>
+                <option>주 3회 이상</option>
+                <option>매일</option>
+              </select>
+            </label>
+            <label class="care-wide">
+              부작용
+              <textarea name="sideEffects" rows="3" placeholder="메스꺼움, 구토, 복통, 어지러움 등"></textarea>
+            </label>
+            <label class="care-wide">
+              식사
+              <textarea name="diet" rows="3" placeholder="최근 식사량, 폭식, 야식, 단백질 섭취 등"></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="care-panel" data-care-section="safety">
+          <h2>안전 확인</h2>
+          <div class="care-checks">
+            <label><input name="severeAbdominalPain" type="checkbox"> 심한 복통이 있습니다</label>
+            <label><input name="persistentVomiting" type="checkbox"> 구토가 반복됩니다</label>
+            <label><input name="dizzinessOrDehydration" type="checkbox"> 어지러움이나 탈수감이 있습니다</label>
+            <label><input name="pregnancyPossibility" type="checkbox"> 임신 가능성이 있습니다</label>
+          </div>
+        </section>
+
+        <section class="care-panel" data-care-section="consultation">
+          <h2>상담 방향</h2>
+          <label>
+            원하는 상담 방향
+            <select name="consultationGoal">
+              <option value="">선택</option>
+              <option>현재 치료 유지 상담</option>
+              <option>용량 변경 상담</option>
+              <option>체중 정체 상담</option>
+              <option>부작용 상담</option>
+              <option>식사/운동 상담</option>
+              <option>기타 상담</option>
+            </select>
+          </label>
+          <label>
+            추가로 의사에게 묻고 싶은 내용
+            <textarea name="patientQuestion" rows="3"></textarea>
+          </label>
+        </section>
+
+        <section class="care-panel" data-care-section="consent">
+          <label class="care-consent">
+            <input name="consent" type="checkbox" required>
+            진료 참고를 위해 문진 내용과 건강정보가 저장되고 의료진 화면에서 AI 요약될 수 있음에 동의합니다.
+          </label>
+        </section>
+
+        <button class="care-primary" id="careSubmitButton" type="submit">문진 제출</button>
+        <p id="careSubmitMessage" class="care-message" role="status"></p>
+      </form>
+    </main>
+
+    <script src="/assets/care-shared.js"></script>
+    <script src="/assets/care-patient.js"></script>
+  </body>
+</html>
